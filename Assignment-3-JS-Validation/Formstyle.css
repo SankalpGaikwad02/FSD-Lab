@@ -1,0 +1,158 @@
+/* =============================================
+   SANKALP — Registration Form CSS
+   Theme: Matches Portfolio (Teal + Clean Light)
+   ============================================= */
+
+   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+   :root {
+       --bg: #f7f6f3;
+       --surface: #ffffff;
+       --surface2: #f0ede8;
+       --accent: #1a7a6e;
+       --accent-light: #e6f4f2;
+       --accent-hover: #155f55;
+       --text: #1c1c1c;
+       --muted: #6b7280;
+       --border: #e2ddd6;
+       --border-focus: #1a7a6e;
+       --error: #dc2626;
+       --shadow: 0 4px 24px rgba(0,0,0,0.08);
+       --radius: 12px;
+       --font-display: 'Lora', Georgia, serif;
+       --font-body: 'Outfit', sans-serif;
+   }
+   
+   *, *::before, *::after {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+   
+   body {
+       font-family: var(--font-body);
+       background: var(--bg);
+       color: var(--text);
+       min-height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding: 40px 20px;
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   /* ---- HEADING ---- */
+   h2 {
+       font-family: var(--font-display);
+       font-size: 2rem;
+       font-weight: 700;
+       color: var(--text);
+       margin-bottom: 32px;
+       text-align: center;
+       position: relative;
+       padding-bottom: 14px;
+   }
+   
+   h2::after {
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 48px;
+       height: 3px;
+       background: var(--accent);
+       border-radius: 2px;
+   }
+   
+   /* ---- FORM CARD ---- */
+   form {
+       background: var(--surface);
+       border: 1px solid var(--border);
+       border-radius: var(--radius);
+       box-shadow: var(--shadow);
+       padding: 48px 40px;
+       width: 100%;
+       max-width: 460px;
+   }
+   
+   /* ---- LABELS ---- */
+   label {
+       display: block;
+       font-size: 0.85rem;
+       font-weight: 500;
+       color: var(--muted);
+       letter-spacing: 0.06em;
+       text-transform: uppercase;
+       margin-bottom: 8px;
+   }
+   
+   /* ---- INPUTS ---- */
+   input[type="text"],
+   input[type="password"] {
+       display: block;
+       width: 100%;
+       padding: 12px 16px;
+       font-family: var(--font-body);
+       font-size: 1rem;
+       color: var(--text);
+       background: var(--surface2);
+       border: 1.5px solid var(--border);
+       border-radius: 8px;
+       outline: none;
+       transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+       margin-bottom: 24px;
+   }
+   
+   input[type="text"]:focus,
+   input[type="password"]:focus {
+       border-color: var(--border-focus);
+       background: #fff;
+       box-shadow: 0 0 0 3px rgba(26,122,110,0.12);
+   }
+   
+   input[type="text"]::placeholder,
+   input[type="password"]::placeholder {
+       color: #bbb;
+   }
+   
+   /* ---- SUBMIT BUTTON ---- */
+   input[type="submit"] {
+       display: block;
+       width: 100%;
+       padding: 14px;
+       margin-top: 8px;
+       font-family: var(--font-body);
+       font-size: 1rem;
+       font-weight: 600;
+       letter-spacing: 0.04em;
+       color: #ffffff;
+       background: var(--accent);
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+   }
+   
+   input[type="submit"]:hover {
+       background: var(--accent-hover);
+       transform: translateY(-2px);
+       box-shadow: 0 6px 20px rgba(26,122,110,0.3);
+   }
+   
+   input[type="submit"]:active {
+       transform: translateY(0);
+       box-shadow: none;
+   }
+   
+   /* ---- RESPONSIVE ---- */
+   @media (max-width: 500px) {
+       form {
+           padding: 32px 24px;
+       }
+   
+       h2 {
+           font-size: 1.6rem;
+       }
+   }
